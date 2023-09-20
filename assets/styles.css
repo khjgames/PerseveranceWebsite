@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'CustomFont'; /* Define a name for your custom font */
+    src: url('balthazar.regular.ttf') format('truetype'); /* Provide the path to your font file */
+}
+
+/* Reset some default styles */
+body {
+    background-color: #181A1B;
+    overflow-x: hidden;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    /*font-family: "Microsoft YaHei";*/
+    /*font-family: 'Balthazar', cursive; /* Set Balthazar as the default font */
+    /*font-family: 'CustomFont', sans-serif;*/ /* Apply the custom font to the entire website */
+    font-size: max(66.6666px, min(min(calc(66.6666px + 33.3333 * ((100vh - 710px) / 370)), calc(66.6666px + 33.3333 * ((100vw - 1280px) / 640))), 100px));
+}
+
+/* learned variables (custom properties in CSS) from https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
+/* Style the background video */
+/* Shrink from 1080 - 720p based on largest resolution (width or height) */
+.bg-video {
+    --video-needed-min-scale: max(80px, max(100vw/16, 100vh/9)); /* to calculate smooth video scaling, choose the greater of 100vw/16 and 100vh/9 
+        scale is 120 at max, 80 at min
+    */
+    min-width: 100%;
+    min-height: 100%;
+    width: calc(var(--video-needed-min-scale)*16);
+    height: calc(var(--video-needed-min-scale)*9);
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50%;
+}
+
+/* Style the navigation bar */
+.navbar {    
+    background: hsla(0,0%,8%,.75);
+    background-image: initial;
+    background-color: rgba(15, 16, 17, 0.75);
+    height: 0.7rem; /* note to self when converting between px, rem, em, vh 0.0661*viewport height is actually 6.61*vh */
+    min-width: 1000px;
+    width: 100%;
+    position: fixed; /* Fixed position to stay at the top */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place it on top of everything else */
+    box-shadow: 0 .04rem .06rem 0 rgba(0,0,0,.3);   
+    display: flex;
+    justify-content: center;
+    align-items: center; /* or align-self: center; */
+}
+
+.navbar_main {
+    width: 1280px;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.nav_img {
+    padding-left: 20px;
+    padding-right: 0.2rem;
+    z-index: 2;
+    max-width: 2.1rem;
+    max-height: 0.55rem;
+    width: auto;
+    height: auto;
+    transform: translateY(0.05rem);
+}
+ 
+/* Style the navigation links */
+.navbar a {
+    color: white;
+    text-decoration: none;
+    display: inline-block; 
+    /*min-width: 1rem;*/
+    /*height: 0.1rem;*/
+    font-size: 0.16rem;
+    padding: 0 0.27rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.1rem;
+    z-index: 1;
+    position: relative;
+    top:-0.2rem;
+
+    min-width: 0.7rem;
+    height: .1rem;
+    cursor: pointer;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Style the navigation links on hover */
+.navbar a:hover {
+    display: flexbox; 
+    color: #E6BC87; /* Change text color on hover */
+    position: relative; /* Add relative positioning for pseudo-element */
+}
+
+.navbar a:hover::after {
+    display: flexbox; 
+    content: ""; /* Add pseudo-element */
+    height: 3px;
+    width: 100%;
+    background-color: #6E4616; /* Add the bottom line color */
+    position: absolute;
+    bottom: -0.19rem;
+    left: 0;
+}
+
+/* For WebKit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666;
+    border-radius: 10px;
+    border: 3px solid #000;
+}
