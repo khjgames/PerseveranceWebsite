@@ -18,6 +18,28 @@ html {
     font-size: max(66.6666px, min(min(calc(66.6666px + 33.3333 * ((100vh - 710px) / 370)), calc(66.6666px + 33.3333 * ((100vw - 1280px) / 640))), 100px));
 }
 
+.bio {
+    padding-top: 2rem;
+}
+
+h4 {
+    color: white;
+    font-family: "Cambria";
+    font-size: 0.27rem;
+    
+} 
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 0.4rem;
+    font-family: "Cambria";
+}
+p {
+    color: white;
+    font-size: 0.21rem;
+    font-family: "Cambria";
+}
+
 /* learned variables (custom properties in CSS) from https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 /* Style the background video */
 /* Shrink from 1080 - 720p based on largest resolution (width or height) */
@@ -29,7 +51,7 @@ html {
     min-height: 100%;
     width: calc(var(--video-needed-min-scale)*16);
     height: calc(var(--video-needed-min-scale)*9);
-    z-index: 0;
+    z-index: -99;
     position: absolute;
     top: 0;
     left: 0;
@@ -70,7 +92,7 @@ html {
     height: auto;
     transform: translateY(0.05rem);
 }
- 
+
 /* Style the navigation links */
 .navbar .nav_a--active,
 .navbar .nav_a {
