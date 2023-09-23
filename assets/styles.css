@@ -18,10 +18,6 @@ html {
     font-size: max(66.6666px, min(min(calc(66.6666px + 33.3333 * ((100vh - 710px) / 370)), calc(66.6666px + 33.3333 * ((100vw - 1280px) / 640))), 100px));
 }
 
-.bio {
-    padding-top: 2rem;
-}
-
 h4 {
     color: white;
     font-family: "Cambria";
@@ -92,8 +88,21 @@ p {
     height: auto;
     transform: translateY(0.05rem);
 }
+    
+.nav_icon {
+    padding-left: 0.31rem;
+    padding-right: 0px;
+    padding-top: 0.65rem;
+    z-index: 2;
+    max-width: 0.4rem;
+    max-height: 0.4rem;
+    width: auto;
+    height: auto;
+    transform: translateY(0.05rem);
+}
 
 /* Style the navigation links */
+.navbar .nav_b,
 .navbar .nav_a--active,
 .navbar .nav_a {
     color: white;
@@ -125,6 +134,15 @@ p {
 }
 
 /* Style the navigation links on hover */
+.navbar .nav_b {
+    font-size: 0;
+    padding: 0 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-width: 0;
+    top:0;
+    height:0;
+}
 
 .navbar .nav_a--active,
 .navbar .nav_a:hover {
