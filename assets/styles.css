@@ -18,19 +18,28 @@ html {
     font-size: max(66.6666px, min(min(calc(66.6666px + 33.3333 * ((100vh - 710px) / 370)), calc(66.6666px + 33.3333 * ((100vw - 1280px) / 640))), 100px));
 }
 
-h4 {
+ul, ol {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+h2, h4, h5 {
     color: white;
     font-family: "Cambria";
-    font-size: 0.27rem;
-    
+    font-size: 0.24rem;
 } 
+h5 {
+    margin-block-start: 0.1rem;
+    margin-block-end: 0.1rem;
+}
+h4 {
+    font-size: 0.27rem;
+}
 h2 {
-    color: white;
     text-align: center;
     font-size: 0.4rem;
-    font-family: "Cambria";
 }
-p {
+p, li {
     color: white;
     font-size: 0.21rem;
     font-family: "Cambria";
