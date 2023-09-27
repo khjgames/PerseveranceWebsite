@@ -3,9 +3,10 @@
 <!-- converting between px, rem, em, vh 0.0661*viewport height is actually 6.61*vh -->
 <!-- Comments are god.      -->
 <!-- This is my life now. https://www.w3schools.com/csS/css3_flexbox.asp -->
-<!--         -->
-<!--     
-    -->
+<!-- image maps unfortunately dont support percentage scaling co-ordinates. There are work-arounds.  
+    for future reference: https://stackoverflow.com/questions/7844399/responsive-image-map
+    https://zaneray.com/responsive-image-map/
+-->
 <!--         -->
 <!-- Chicken is good food. -->
 <!DOCTYPE html>
@@ -20,13 +21,51 @@
 </head>
 
 <body>
-    <video game_trailer_bg="" autoplay="autoplay" muted="muted" loop="loop" poster="images/Promotion_Slide_1_C.png" class="bg-video"><source trailer_src="" src="videos/Stream_Startup_Countdown.mov" type="video/mp4"></video>
+    <section id="sp" style="position: absolute; top: 0;">
+        <video class="bg-video" autoplay="autoplay" muted="muted" loop="loop" poster="images/Totenheim_BG.png"><source src="videos/Stream_Startup_Countdown.mov" type="video/mp4"></video>
+    </section>
+
     <!--
     -->
-    <div nav_home="" class="home">
-        <div nav_top="" class="navbar">
-            <div nav_main="" class="navbar_main">
-                <img nav_logo="" class="nav_img" src="images/Title_Card.png" alt="Perseverance Studios Logo">
+    <section id="str" style=" --video-needed-min-scale: max(80px, max(100vw/16, 100vh/9)); position: absolute; top: calc(var(--video-needed-min-scale)*9); width: 200px;">
+        <hr style="position: absolute; width:100vw; margin: 0px -9px 0px;">
+        <hr style="position: absolute; width:100vw; margin: 0px -9px 0px; padding-bottom: 5rem;">
+<pre style="color:white; font-size:0.05rem;"> <!-- Yes. I used this tag for ASCII art. Its great for that. -KHJ -->
+                                                                                                                                                                                                       
+                      %%                                                                                                                 %                                    %                        
+  %@@%%%@%@%%@@%  @@@@@@@@@%*#@@@@@@%%@@%%%@@@%%    %%%@@%%%%@@#++*%%%%%%%%@@##@@@@@%%@@@ @%%%%%%@@%%@%%%%@@%%%@%@%@%%@@@@%%%%          @%%%###%   @@@%%%%#   %%%%%#*@   %@@%%%%%%@@@@%%%#@@%##%#**#   
+  @%+-+=-===--=+%@%#+-=====+=-+*##%*----*++#=+*+%%  @*=--=+++--+#**==-=====-:::#*=:::-+#% ##*---*##*----=++=--=*%%*-==%%==---=*%%      %#----+@    %%=::::+#% @#=--=#@  @#=::-==-::-##+--::-+===--=%   
+   %*---+%%%#----#%%#==+*%%%##=-*@%%+---*%%%#=--=% %+---##% @=++@ %+=--*%% @#::%@@=::-*%  %%#=+%% #+--=+%  @#--#@%#==-=#%@@+---+@%     @=:--:=@@     *-::::=%  %#-:%@ %%--:-*+%%%+:-@ @+:::*%% ++-=#%  
+   %**+-+%% #=-=-*@%#=---%%%%%@@@ %%=---+% %%----%%%=---=%@%%%%@@ @++--+%%@@@%%@ %*-:-=@@ %%+=*@  @*---=%%@@@@%% @%----#  @#---=%   %%@*-++=*-*@%    %-:=:::+%@%*-:#% %=:::*%    @@%# @=:::*% @%%%%@   
+   @*+=-=%%%#=---%@%#=---%%%=-%    @-=--*%%@#--:=@%%#----+*#%%%   %=---*@@+-+%    @=---*@ %+-=%   %*-++=%%#-=%%  %#----#%%@*---*@   %%#-*%#-:--%%   %%-=#=-===@%*::%@%#--::#*        %%+-::*%%+:+@     
+   %+-*==*++=--=#%%@#---------#    %+-:-=++=--=*@@  @%*=-----=#@ %%=--------+%    %#----###--%@   @*----==--+%   @%---=++=-=-+%%   %%#--*%@+:::=%%   #--#%+:-:-##-:##%*:-=-#%         #=:-:--++-*@     
+   @*=--=#**#%@@%  @%=:--%@*+=#    @----+#=---=##     %%%+---:-*%%%=---+#%*-+%    %%=:::+%=-#@    %*---+%%#=+%%  %%--:-**=---+#*   %%=:=****=-:-*%   #--#%%+----*-:#% *:=::##         %*--=*=#%+*@     
+   @+---=%         @%=---%%%#%###%%%-::-+%#+-::-#% @@@@% %%*::-=%%%=---*@ +#@%#@@  @%--:-=-+%%    %*-:-*%%%*%#%%%@%-::=#%#=:::-##  @*--###*#*:--+%%  %-*#% %+:::---#% %-:::*%%   %%@# %+--:*%% ####*   
+   %+---=%         %#-==-%@%%#=-+@ @-:::+%@%+-:-=#@#=-#% %%#-::+@%%=-:-*%%%%*-:#%   @#=:--=%      @*--:=%%%%#--#@%%:::-% @%-::-=@@%#-:#%   =*-:::#@  #--#%  @*-:---#% %*:::=%%%@@+:-%%@*-::*@##@*:=#%  
+  @#=----#*       @%+-=--=++=-::*@@#::::=%@@@*=---*#=-:-++*--:*% %#--:--===--::%%   @%----#%     @%=-+-=====::-#@@+---=+@@%@=:::-##-::+** @%*-::--*%%+::=%@  %**=--#%  @%=:::-+=-=+-%%#-:::-===---+@   
+  @%########      @%%###########%%@######%@  #@####%@%###*#%@@%  @%############%%   %%#*##@      @########%####@@@######%@ @@%####%%##%%% @@####%##@%##%#%@   @%###%%   %%@%#*+**#%@%%#############@   
+                                                                                                                                   %                                                                   
+                                                                                                                                                                                                       
+                                                                                                                                                                                                       
+                                                                                                                                                                                                       
+                                %  @%  %%%%%%%%%#  %%@%%%#+%    %@      @%%%   @@%%%@     %% %%    %@%%@#+#@%%%    %%@@     @%%%%  %%%  %%@@    @%%%%#-        %%%@#%                                  
+                              %=---*@%*=----=%*------+=##=+==%@*-===#  %*--*% %%*---=%@ %@*---+%% #+---+@*---+@@ #+-==+#%##+====+#%#*+======*%@%#--==---+@@%@#+==--=%@                                 
+                              %%-:=%%*:+%@#+-#%-::%%%*=#%+::+%@*:=%#% %#--=+%@  @-:-%@    %=---+%%#=-:-%%%=--:=%%#---=%%%+--#%@*--+%@#--*#%+-=#%#*::#%%:--%%=--#%%%=*#                                 
+                 %%%@@        %#=:=%@+::+*@%%%%-::%%=#@@%+::*%=-%%    @==#::+%  @-:-%%   %%=-+:-*%-=-:-# %=-=--*%++=:-%%#-=+% %#=--%%#=#%@%+-*%@#=::#%%-:-%#-:+#   @@      %%%#%  @%                   
+               @%==:=*##=+%   %#--+% @*=--:=#%%-::==-*%%@*-:=::-#%   @*-#%=:-#%%%--=%@    @=-#-:+==#=--%%@=+#+-**=#=:-%%*--*%% %+--#%#--=+=-+%% @+::++--+%%+:-*%@##**#%  @%+---+**==#                  
+              %%%+%@#=:-#@@    #-:=%@@@%%#::=%%-:-%@@@@@%+::*%-::*@ @%:---=-:+%%%-:-#%    %==%*:::#%-:-%%@==##::-#%=:-%%#=*#% %#=##%%*--*@*--+@ @+--#%@@  @*::+%@%-=+@@  @%*%@%+==*%@                  
+                     @@@%     @%-:=%%-=%%%=-=##---%%%+-#%+::+%%+::+%%=-%%%%=--%#%-::%@    %=-%@=:+@%=:=%%@=+%%+:+%%=:-%%@+-=%#@*--*%##--*@%++=#@@=:-#%     %=:=#%#--*%         @@@@                    
+                              %====*%+=---=*=%+==+=====+*====##+=======+#**===+%#===+## %%*==+%@@%%*====@+=+*@@@@@+===+%%%%*+--+**%+++===*@%+++**====+=     @#+=-=*=*#                                 
+                                    %        %%   %%%%   %%               % %%   %%%%       %%       %              %%%    %%       %       %  %%%%            @%%%%                                   
+                                                                                                                                                                                                                                                                                                                                                                                                             
+</pre>
+    </section>
+    <!--
+    -->
+    <div class="home">
+        <div class="navbar">
+            <div class="navbar_main">
+                <img class="nav_img" src="images/Title_Card.png" alt="Perseverance Studios Logo">
                 <a class="nav_a" href="index.html">HOME</a>
                 <a class="nav_a" href="about.html">ABOUT US</a>
                 <a class="nav_a" href="portfolio.html">PORTFOLIO</a>
@@ -40,14 +79,34 @@
                 </a>
             </div>
         </div>
+        <!--
+        -->
+        <div style="padding-left: 1rem; padding-top: calc(4.5rem - 225px);">   
+            <img src="images/Stats_Interactable.png" alt="Character Stats GUI" usemap="#statmap" width="516" height="350" >
+            <map name="statmap">
+                <area shape="rect" coords="100,23,308,70" alt="Stat Points" href="#sp" onclick="statInfo('sp')">
+                <area shape="rect" coords="67,81,128,111" alt="Strength" href="#str" onclick="statInfo('str')">
+                <area shape="rect" coords="271,81,332,111" alt="Luck" href="#lck" onclick="statInfo('lck')">
+                <area shape="rect" coords="67,126,128,156" alt="Wisdom" href="#wis" onclick="statInfo('wis')">
+                <area shape="rect" coords="271,126,332,156" alt="Perception" href="#prc" onclick="statInfo('prc')">
+                <area shape="rect" coords="67,171,128,201" alt="Agility" href="#agi" onclick="statInfo('agi')">
+                <area shape="rect" coords="271,171,332,201" alt="Focus" href="#fcs" onclick="statInfo('fcs')">
+                <area shape="rect" coords="67,216,128,246" alt="Toughness" href="#tgh" onclick="statInfo('tgh')">
+                <area shape="rect" coords="271,216,332,246" alt="Immunity" href="#imn" onclick="statInfo('imn')">
+            </map>
+        </div>
     </div>
+    <!--
+    -->
     <script> //This is where I would write simple javascript that does not merit its own file
         function hover(element, new_src) {
             element.setAttribute('src', new_src);
         }
-
         function unhover(element, new_src) {
             element.setAttribute('src', new_src);
+        }
+        function statInfo(stat) {
+            //element.setAttribute('content', stat);
         }
     </script>
 </body>
