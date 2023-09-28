@@ -39,12 +39,34 @@ h2 {
     text-align: center;
     font-size: 0.4rem;
 }
-p, li {
+table, th, td {
+    border: 0.04rem solid #181A1B;
+}
+p, li, th, td {
     color: white;
     font-size: 0.21rem;
     font-family: "Cambria";
+    text-align: left;
 }
 
+tr:nth-child(odd) {
+    background-color: #ffffff19;
+}
+tr:nth-child(even) {
+    background-color: #ffffff08;
+  }
+
+th, td {
+    padding-left: 0.04rem;
+    padding-right: 0.04rem;
+    padding-top: 0.04rem;
+    padding-bottom: 0.04rem;
+    font-size: 0.18rem;
+}
+
+th {
+    font-size: 0.21rem;
+}
 /* learned variables (custom properties in CSS) from https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 /* Style the background video */
 /* Shrink from 1080 - 720p based on largest resolution (width or height) */

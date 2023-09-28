@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/styles.css">
-    <title>Your Website</title>
+    <title>PROGRESSION — Perseverance: Isekai MMORPG</title>
 </head>
 
 <body>
@@ -49,6 +49,39 @@
                 <li>&nbsp68 xp</li>
                 <li>&nbsp95 xp</li>
             </ol>
+        </div>
+        <div style="position: absolute; left: 10rem;">
+            <h5 style="width: 6rem;"> </h5> <!-- this is here temporarily because the table css gets super messed up without it -->
+            <table>
+                <tr>
+                  <th style="text-align: center;">Learned at</th>
+                  <th colspan="3" style="text-align: center;"> Rogue class progression </th>
+                </tr>
+                <tr>
+                    <th> Lv.7 - passive </th>
+                    <td>Devils Luck</td>
+                    <td>Substitution</td>
+                    <td>Ethereal</td>
+                </tr>
+                <tr> 
+                    <th> Lv.9 - skill </th>
+                    <td>Shadowstep</td>
+                    <td>Tripple Burst</td>
+                    <td>Haste</td>
+                </tr>
+                <tr> 
+                    <th> Lv.11 -  passive </th>
+                    <td>Archers Pride</td>
+                    <td>Vampiric</td>
+                    <td>Phantasmal</td>
+                </tr>
+                <tr>
+                    <th> Lv.12 - skill </th>
+                    <td>Step Shot</td>
+                    <td>Dagger Throw</td>
+                    <td>Phantom Drain</td>
+                </tr>
+              </table>
         </div>
 <pre style="color:white; font-size:0.05rem;"> <!-- Yes. I used this tag for ASCII art. Its great for that. -KHJ -->
                                                                                                                                                                                                        
@@ -120,12 +153,20 @@
     -->
     <script> //This is where I would write simple javascript that does not merit its own file
         function hover(element, new_src) {
-            element.setAttribute('src', new_src);
+            element.setAttribute('src', new_src); 
         }
         function unhover(element, new_src) {
             element.setAttribute('src', new_src);
         }
-        function statInfo(stat) {
+        function statInfo(stat) { //I would either toggle the visibility, 
+            // or content of html elements to display descriptions of the selected stat here, 
+            // but I needed an image map (and have no practical use case)
+            // and I needed to show I knew how to do a hyperlink / jump redirect. 
+            // (again no practical current use case as I don't have enough webpage 
+            // content ready (game info & footage) to need to be able to quickly scroll through it)
+            // and planning how to do best display my information for the mmorpg as a landing page is a long and tedious process.
+            // so for the sake of the assignment it will temporarily just be this
+            // press "str" to go to bottom of page, "stat points" to go to top.
             //element.setAttribute('content', stat);
         }
     </script>
