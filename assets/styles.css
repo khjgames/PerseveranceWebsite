@@ -42,7 +42,7 @@ h2 {
 table, th, td {
     border: 0.04rem solid #181A1B;
 }
-p, li, th, td {
+p, li, th, td, q, blockquote{
     color: white;
     font-size: 0.21rem;
     font-family: "Cambria";
