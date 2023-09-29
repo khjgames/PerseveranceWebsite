@@ -4,12 +4,12 @@
 }
 
 /* Reset some default styles */
-body {
+body { /*External CSS element selectors [1/3 marks]*/
     background-color: #181A1B;
     overflow-x: hidden;
 }
 
-html {
+html { /*External CSS element selectors [2/3 marks]*/
     margin: 0;
     padding: 0;
     /*font-family: "Microsoft YaHei";*/
@@ -18,7 +18,7 @@ html {
     font-size: max(66.6666px, min(min(calc(66.6666px + 33.3333 * ((100vh - 710px) / 370)), calc(66.6666px + 33.3333 * ((100vw - 1280px) / 640))), 100px));
 }
 
-ul, ol {
+ul, ol { /*External CSS element selectors [3/3 marks]*/
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -54,7 +54,7 @@ tr:nth-child(odd) {
 }
 tr:nth-child(even) {
     background-color: #ffffff08;
-  }
+}
 
 th, td {
     padding-left: 0.04rem;
@@ -70,6 +70,12 @@ th {
 /* learned variables (custom properties in CSS) from https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties */
 /* Style the background video */
 /* Shrink from 1080 - 720p based on largest resolution (width or height) */
+
+.tl {/* top-left class (combined with navbar or tl bg-video to */
+    top: 0;
+    left: 0;
+}
+
 .bg-video {
     --video-needed-min-scale: max(80px, max(100vw/16, 100vh/9)); /* to calculate smooth video scaling, choose the greater of 100vw/16 and 100vh/9 
         scale is 120 at max, 80 at min
@@ -80,8 +86,6 @@ th {
     height: calc(var(--video-needed-min-scale)*9);
     z-index: -99;
     position: absolute;
-    top: 0;
-    left: 0;
     background: transparent url("poster.jpg") 50% 50% / cover no-repeat ;
 }
 
@@ -94,8 +98,6 @@ th {
     min-width: 1000px;
     width: 100%;
     position: fixed; /* Fixed position to stay at the top */
-    top: 0;
-    left: 0;
     z-index: 1; /* Place it on top of everything else */
     box-shadow: 0 .04rem .06rem 0 rgba(0,0,0,.3);   
     display: flex;
