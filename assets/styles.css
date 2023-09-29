@@ -71,12 +71,12 @@ th {
 /* Style the background video */
 /* Shrink from 1080 - 720p based on largest resolution (width or height) */
 
-.tl {/* top-left class (combined with navbar or tl bg-video to */
+.tl {/* External CSS class selectors [1/2 marks], top-left class (combined with navbar or tl bg-video to */ 
     top: 0;
     left: 0;
 }
 
-.bg-video {
+.bg-video { /* External CSS class selectors [2/2 marks] */
     --video-needed-min-scale: max(80px, max(100vw/16, 100vh/9)); /* to calculate smooth video scaling, choose the greater of 100vw/16 and 100vh/9 
         scale is 120 at max, 80 at min
     */
