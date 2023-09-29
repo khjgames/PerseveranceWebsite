@@ -3,6 +3,10 @@
     src: url('balthazar.regular.ttf') format('truetype'); /* Provide the path to your font file */
 }
 
+#useless_external_css_id_selector {
+    padding-left: 0.03rem;
+}
+
 /* Reset some default styles */
 body { /*External CSS element selectors [1/3 marks]*/
     background-color: #181A1B;
