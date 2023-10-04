@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    <video autoplay="autoplay" muted="muted" loop="loop" poster="images/Teaser_C.png" class="tl bg-video"><source src="videos/Stream_Startup_Countdown.mov" type="video/mp4"></video>
+    <video id = "scrolling_anchor_video" style = "left: 0;" autoplay="autoplay" muted="muted" loop="loop" poster="images/Teaser_C.png" class="bg-video"><source src="videos/Stream_Startup_Countdown.mov" type="video/mp4"></video>
     <!--
     -->
     <div class="home">
@@ -169,8 +169,33 @@
         function unhover(element, new_src) {
             element.setAttribute('src', new_src);
         }
+        
+        function getScrollPercent() {
+            var h = document.documentElement, 
+                b = document.body,
+                st = 'scrollTop',
+                sh = 'scrollHeight';
+            return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+        }
+
+        window.addEventListener('scroll', function() {
+            var scrollPercent = getScrollPercent();           
+            var element = document.getElementById("scrolling_anchor_video");
+            //top: calc(100vh - var(--video-needed-min-scale) * 9)
+            var style = getComputedStyle(element);
+            var height = element.offsetHeight;
+            console.log('Scroll Percentage:', scrollPercent);
+            element.style.bottom = '0'; 
+            var windowHeight = window.innerHeight;
+            var maxOffsetHeight = (height - windowHeight);
+            var scroll_tween_range = 60;
+            var offsetHeight = maxOffsetHeight/scroll_tween_range*Math.min(scroll_tween_range,Math.max(scrollPercent-(80-scroll_tween_range),0));
+            var scrollPosition = window.scrollY;
+            var newBottomPosition = windowHeight - (scrollPosition + height - offsetHeight);
+            element.style.bottom = '' + newBottomPosition + 'px';
+            console.log("why doesn't this work? " + offsetHeight);
+        });
     </script>
 </body>
 
 </html>
-
