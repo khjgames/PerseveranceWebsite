@@ -29,14 +29,16 @@
     </style>
 </head>
 
-<body>
-    <video id = "scrolling_anchor_video" style = "left: 0;" autoplay="autoplay" muted="muted" loop="loop" poster="images/Teaser_C.png" class="bg-video"><source src="videos/Stream_Startup_Countdown.mov" type="video/mp4"></video>
+<body> <!-- onload="scrollingAnchor()" -->
+    <video id = "scrolling_anchor_video" style = "left: 0; top:0;" autoplay="autoplay" muted="muted" loop="loop" poster="images/Teaser_C.png" class="bg-video"><source src="videos/Stream_Startup_Countdown.mov" type="video/mp4"></video>
     <!--
     -->
     <div class="home">
         <div class="tl navbar">
             <div class="tl navbar_main">
-                <img class="nav_img" src="images/Title_Card.png" alt="Perseverance Studios Logo">
+                <a href="about.html" style="font-size: 0; padding: 0 0 0 0; top:0; height:0;">
+                    <img class="nav_img" src="images/Title_Card.png" alt="Perseverance Studios Logo">
+                </a>
                 <a class="nav_a" href="index.html">HOME</a>
                 <a class="nav_a" href="about.html">ABOUT US</a>
                 <a class="nav_a--active" href="#">PORTFOLIO</a>
@@ -162,25 +164,25 @@
         </div>
     </article>
     <script> //This is where I would write simple javascript that does not merit its own file
-        function hover(element, new_src) {
+        function hover(element, new_src){
             element.setAttribute('src', new_src);
         }
 
-        function unhover(element, new_src) {
+        function unhover(element, new_src){
             element.setAttribute('src', new_src);
         }
         
-        function getScrollPercent() {
+        function getScrollPercent(){
             var h = document.documentElement, 
                 b = document.body,
                 st = 'scrollTop',
                 sh = 'scrollHeight';
             return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
         }
-
-        window.addEventListener('scroll', function() {
+        function scrollingAnchor(){
             var scrollPercent = getScrollPercent();           
             var element = document.getElementById("scrolling_anchor_video");
+            element.style.removeProperty("top"); //only use top:0 for initial position during load / before first scroll
             //top: calc(100vh - var(--video-needed-min-scale) * 9)
             var style = getComputedStyle(element);
             var height = element.offsetHeight;
@@ -194,6 +196,10 @@
             var newBottomPosition = windowHeight - (scrollPosition + height - offsetHeight);
             element.style.bottom = '' + newBottomPosition + 'px';
             console.log("why doesn't this work? " + offsetHeight);
+        }
+
+        window.addEventListener('scroll', function() {
+            scrollingAnchor();
         });
     </script>
 </body>
