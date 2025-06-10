@@ -8,12 +8,12 @@
 }
 
 /* Reset some default styles */
-body { /*External CSS element selectors [1/3 marks]*/
+body { /*External CSS element selectors*/
     background-color: #181A1B;
     overflow-x: hidden;
 }
 
-html { /*External CSS element selectors [2/3 marks]*/
+html { /*External CSS element selectors*/
     margin: 0;
     padding: 0;
     /*font-family: "Microsoft YaHei";*/
@@ -22,7 +22,7 @@ html { /*External CSS element selectors [2/3 marks]*/
     font-size: max(66.6666px, min(min(calc(66.6666px + 33.3333 * ((100vh - 710px) / 370)), calc(66.6666px + 33.3333 * ((100vw - 1280px) / 640))), 100px));
 }
 
-ul, ol { /*External CSS element selectors [3/3 marks]*/
+ul, ol { /*External CSS element selectors*/
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -75,12 +75,12 @@ th {
 /* Style the background video */
 /* Shrink from 1080 - 720p based on largest resolution (width or height) */
 
-.tl {/* External CSS class selectors [1/2 marks], top-left class (combined with navbar or tl bg-video to */ 
+.tl {/* External CSS class selectors, top-left class (combined with navbar or tl bg-video to */ 
     top: 0;
     left: 0;
 }
 
-.bg-video { /* External CSS class selectors [2/2 marks] */
+.bg-video { /* External CSS class selectors */
     --video-needed-min-scale: max(80px, max(100vw/16, 100vh/9)); /* to calculate smooth video scaling, choose the greater of 100vw/16 and 100vh/9 
         scale is 120 at max, 80 at min
     */
